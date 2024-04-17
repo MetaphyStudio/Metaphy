@@ -1,0 +1,14 @@
+[package]
+name = "metaphysics"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["rt-multi-thread", "sync"] }
+godot = { git = "https://github.com/godot-rust/gdext", branch = "master" }
+metaphy_network = { path = "../MetaphyNetwork/", features = ["user"] }
